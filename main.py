@@ -80,7 +80,7 @@ def main():
     ws = wb.add_worksheet()
     ws.write(0, 0, "Image URL")
     ws.write(0, 1, "Bib Number")
-    for json_path in glob.glob("data/*.json"):
+    for idx, json_path in enumerate(glob.glob("data/*.json")):
         data = None
         with open(json_path) as ref:
             data = json.load(ref)
